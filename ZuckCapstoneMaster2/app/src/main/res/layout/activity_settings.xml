@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsActivity">
+
+    <!--  Enter Starting Weight Label DONE -->
+    <TextView
+        android:id="@+id/label_settings_current_weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/purple_200"
+        android:padding="10dp"
+        android:gravity="center"
+        android:text="@string/settings_starting_weight_label"
+        android:textSize="20sp"
+        tools:ignore="MissingConstraints" />
+
+    <!--  Enter Starting Weight Input DONE -->
+    <EditText
+        android:id="@+id/input_settings_current_weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@id/label_settings_current_weight"
+        android:padding="10dp"
+        android:gravity="center"
+        android:hint="@string/settings_starting_weight_input_hint"
+        android:inputType="numberDecimal"
+        android:textSize="20sp"
+        tools:ignore="MissingConstraints" />
+
+    <!--  Enter Starting Date Label DONE -->
+    <TextView
+        android:id="@+id/label_settings_starting_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/label_settings_current_weight"
+        android:layout_alignRight="@id/label_settings_current_weight"
+        android:layout_alignLeft="@id/label_settings_current_weight"
+        android:layout_marginTop="20dp"
+        android:background="@color/purple_200"
+        android:padding="10dp"
+        android:gravity="center"
+        android:text="@string/settings_starting_date_label"
+        android:textSize="20sp"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/input_settings_starting_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:cursorVisible="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:layout_below="@id/input_settings_current_weight"
+        android:layout_toRightOf="@id/label_settings_starting_date"
+        android:layout_alignRight="@id/input_settings_current_weight"
+        android:layout_alignLeft="@id/input_settings_current_weight"
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:hint="@string/settings_starting_date_input_hint"/>
+
+    <!--  Enter Target Weight Label DONE -->
+    <TextView
+        android:id="@+id/label_settings_target_weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/label_settings_starting_date"
+        android:layout_alignRight="@id/label_settings_current_weight"
+        android:layout_alignLeft="@id/label_settings_current_weight"
+        android:layout_marginTop="20dp"
+        android:background="@color/purple_200"
+        android:padding="10dp"
+        android:gravity="center"
+        android:text="@string/settings_target_weight_label"
+        android:textSize="20sp"
+        tools:ignore="MissingConstraints" />
+
+    <!--  Enter Target Weight Input DONE -->
+    <EditText
+        android:id="@+id/input_settings_target_weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/input_settings_starting_date"
+        android:layout_alignRight="@id/input_settings_current_weight"
+        android:layout_alignLeft="@id/input_settings_current_weight"
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
+        android:gravity="center"
+        android:hint="@string/settings_target_weight_input_hint"
+        android:inputType="numberDecimal"
+        android:textSize="20sp"
+        tools:ignore="MissingConstraints" />
+
+    <!--  Enter Target Date Label DONE -->
+    <TextView
+        android:id="@+id/label_settings_target_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/label_settings_target_weight"
+        android:layout_alignRight="@id/label_settings_current_weight"
+        android:layout_alignLeft="@id/label_settings_current_weight"
+        android:layout_marginTop="20dp"
+        android:background="@color/purple_200"
+        android:padding="10dp"
+        android:gravity="center"
+        android:text="@string/settings_target_date_input_hint"
+        android:textSize="20sp"
+        tools:ignore="MissingConstraints" />
+
+    <!-- Enter Target Date Input DONE -->
+    <EditText
+        android:id="@+id/input_settings_target_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:cursorVisible="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:layout_below="@id/input_settings_target_weight"
+        android:layout_alignRight="@id/input_settings_current_weight"
+        android:layout_alignLeft="@id/input_settings_current_weight"
+        android:layout_alignBottom="@id/label_settings_target_date"
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:hint="@string/settings_target_date_input_hint"/>
+
+    <!--  Enter Gender Label DONE -->
+    <TextView
+        android:id="@+id/label_settings_gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/label_settings_target_date"
+        android:layout_alignRight="@id/label_settings_current_weight"
+        android:layout_alignLeft="@id/label_settings_current_weight"
+        android:layout_marginTop="60dp"
+        android:background="@color/purple_200"
+        android:padding="10dp"
+        android:gravity="center"
+        android:text="@string/settings_select_gender_label"
+        android:textSize="20sp"
+        tools:ignore="MissingConstraints" />
+
+    <!--  Enter Gender Radio Button DONE -->
+    <RadioGroup
+        android:id="@+id/myRadioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/input_settings_target_date"
+        android:layout_toRightOf="@id/label_settings_gender"
+        android:layout_alignRight="@id/input_settings_current_weight"
+        android:layout_alignLeft="@id/input_settings_current_weight"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="25dp">
+
+
+        <RadioButton
+            android:id="@+id/radio_button_female"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/settings_gender_female_option" />
+
+        <RadioButton
+            android:id="@+id/radio_button_male"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/settings_gender_male_option" />
+
+        <RadioButton
+            android:id="@+id/radio_button_no_answer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/settings_gender_prefer_not_to_answer_option" />
+
+    </RadioGroup>
+
+    <!--  Enter Height Label DONE -->
+    <TextView
+        android:id="@+id/label_settings_height"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/label_settings_gender"
+        android:layout_alignRight="@id/label_settings_current_weight"
+        android:layout_alignLeft="@id/label_settings_current_weight"
+        android:layout_marginTop="60dp"
+        android:background="@color/purple_200"
+        android:padding="10dp"
+        android:gravity="center"
+        android:text="@string/settings_height_label"
+        android:textSize="20sp"
+        tools:ignore="MissingConstraints" />
+
+
+    <!--  Enter Height Input DONE -->
+    <EditText
+        android:id="@+id/input_settings_height"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/myRadioGroup"
+        android:layout_alignRight="@id/input_settings_current_weight"
+        android:layout_alignLeft="@id/input_settings_current_weight"
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
+        android:gravity="center"
+        android:text="@string/settings_height_input_hint"
+        android:inputType="text"
+        android:textSize="20sp"
+        tools:ignore="MissingConstraints" />
+
+    <!--  Save Settings Button -->
+    <Button
+        android:id="@+id/button_settings_save_settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/label_settings_height"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:paddingRight="5dp"
+        android:background="@color/purple_200"
+        android:textSize="20sp"
+        android:text="@string/settings_save_settings_button"
+        android:onClick="addSettings"/>
+
+    <!--  Discard Settings Button DONE -->
+    <Button
+        android:id="@+id/button_settings_discard_settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/label_settings_height"
+        android:layout_toRightOf="@id/button_settings_save_settings"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:paddingLeft="5dp"
+        android:background="@color/purple_200"
+        android:textSize="15sp"
+        android:text="@string/settings_home_screen_settings_button"
+        android:onClick="goToMain"/>
+
+
+</RelativeLayout>
