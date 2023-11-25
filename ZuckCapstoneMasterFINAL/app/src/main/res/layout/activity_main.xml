@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="?attr/actionBarSize">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:background="?android:attr/windowBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/menu" />
+
+    <!--  Current Weight Label DONE  -->
+    <TextView
+        android:id="@+id/label_main_current_weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/purple_200"
+        android:padding="10dp"
+        android:gravity="center"
+        android:text="@string/main_current_weight_label"
+        android:textSize="20sp"
+        tools:ignore="MissingConstraints" />
+
+    <!--  Current Weight Number DONE  -->
+    <TextView
+        android:id="@+id/label_current_weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@id/label_main_current_weight"
+        android:gravity="center"
+        android:text="@string/main_current_weight_label_number"
+        android:padding="10dp"
+        android:textSize="20sp" />
+
+    <!-- BMI Label  DONE  -->
+    <TextView
+        android:id="@+id/label_bmi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/label_main_current_weight"
+        android:layout_alignRight="@id/label_main_current_weight"
+        android:layout_alignLeft="@id/label_main_current_weight"
+        android:layout_marginTop="20dp"
+        android:background="@color/purple_200"
+        android:padding="10dp"
+        android:gravity="center"
+        android:text="@string/main_current_body_max_index_label"
+        android:textSize="20sp"
+        tools:ignore="MissingConstraints" />
+
+    <!-- BMI number DONE -->
+    <TextView
+        android:id="@+id/label_bmi_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/label_current_weight"
+        android:layout_alignRight="@id/label_current_weight"
+        android:layout_alignLeft="@id/label_current_weight"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@id/label_bmi"
+        android:gravity="center"
+        android:text="@string/main_current_body_max_index_number"
+        android:padding="10dp"
+        android:textSize="20sp" />
+
+    <!-- Avg Weekly Loss Label DONE -->
+    <TextView
+        android:id="@+id/label_avg_weekly_weight_loss"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/label_bmi"
+        android:layout_alignRight="@id/label_main_current_weight"
+        android:layout_alignLeft="@id/label_main_current_weight"
+        android:layout_marginTop="20dp"
+        android:background="@color/purple_200"
+        android:padding="10dp"
+        android:gravity="center"
+        android:text="@string/main_avg_weekly_weight_loss_label"
+        android:textSize="20sp"
+        tools:ignore="MissingConstraints" />
+
+    <!-- Avg Weekly Loss Number DONE  -->
+    <TextView
+        android:id="@+id/label_avg_weekly_weight_loss_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/label_bmi"
+        android:layout_alignBottom="@id/label_avg_weekly_weight_loss"
+        android:layout_alignRight="@id/label_current_weight"
+        android:layout_alignLeft="@id/label_current_weight"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@id/label_avg_weekly_weight_loss"
+        android:gravity="center"
+        android:text="@string/main_avg_weekly_weight_loss_label_number"
+        android:padding="10dp"
+        android:textSize="20sp" />
+
+    <!-- Weight loss to date label DONE -->
+    <TextView
+        android:id="@+id/label_total_weight_loss"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/label_avg_weekly_weight_loss"
+        android:layout_alignRight="@id/label_main_current_weight"
+        android:layout_alignLeft="@id/label_main_current_weight"
+        android:layout_marginTop="20dp"
+        android:background="@color/purple_200"
+        android:padding="10dp"
+        android:gravity="center"
+        android:text="@string/main_total_weight_loss_label"
+        android:textSize="20sp"
+        tools:ignore="MissingConstraints" />
+
+    <!-- Weight loss to date number DONE -->
+    <TextView
+        android:id="@+id/label_total_weight_loss_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/label_avg_weekly_weight_loss_number"
+        android:layout_alignTop="@id/label_total_weight_loss"
+        android:layout_alignRight="@id/label_current_weight"
+        android:layout_alignLeft="@id/label_current_weight"
+        android:layout_toRightOf="@id/label_total_weight_loss"
+        android:gravity="center"
+        android:text="@string/main_total_weight_loss_label_number"
+        android:padding="10dp"
+        android:textSize="20sp" />
+
+    <!--  Navigation Buttons   -->
+    <Button
+        android:id="@+id/button_add_new_entry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/label_total_weight_loss"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        android:gravity="center_horizontal"
+        android:text="@string/main_add_new_entry_button"
+        android:onClick="enterData"/>
+
+    <Button
+        android:id="@+id/button_update_settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/label_total_weight_loss_number"
+        android:layout_alignTop="@id/button_add_new_entry"
+        android:layout_marginLeft="31dp"
+        android:layout_marginTop="27dp"
+        android:layout_toRightOf="@id/button_add_new_entry"
+        android:gravity="center_horizontal"
+        android:onClick="updateSettings"
+        android:text="@string/main_update_settings_button" />
+
+    <Button
+        android:id="@+id/button_view_history"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_add_new_entry"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="30dp"
+        android:gravity="center_horizontal"
+        android:text="@string/main_view_history_button"
+        android:onClick="viewHistory"/>
+
+</RelativeLayout>
